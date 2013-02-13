@@ -32,8 +32,12 @@ module.exports = function(grunt) {
                 maxcomplexity: 3
                 /*indent: 4  comment out until white/indent options are separated => https://github.com/jshint/jshint/issues/655 */
             },
+            globals: {
+                Submit: true
+            },
             tests: {
                 globals: {
+                    Submit: true,
                     asyncTest: true,
                     deepEqual: true,
                     equal: true,
