@@ -1,0 +1,22 @@
+#iphone {
+	margin: auto;
+	text-align: center;
+	background: url('./iphone.png') no-repeat 50% 0;
+	height: 620px;
+	padding-top: 164px;
+}
+#iphone .content {
+	border: none;
+}
+#url-form {
+    margin: auto;
+	text-align: center;
+}
+#url-form input[type="text"] {
+    font-family: Arial, Sans-Serif;
+	font-size: 13px;
+	padding: 4px;
+	width: 400px;
+	border: solid 1px #85b1de;
+	background-color: #FFFAFA;
+}
