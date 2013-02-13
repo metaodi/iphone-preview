@@ -1,17 +1,19 @@
+var loadUrl = function(url, iframe) {
+    if (! /^https?.*/.test(url.value)) {
+        url.value = 'http://' + url.value;
+    }
+    console.log("Loading " + url.value);
+    iframe.src = url.value;
+}
+
 var init = function() {
-    var urlSubmit = document.getElementById('url-submit'),
-        urlForm = document.getElementById('url-form'),
-        loadUrl;
-    
-    loadUrl = function() {
-        var url = document.getElementById('url'),
-            iphone = document.getElementById('iphone-iframe');
-            
-        if (! /^http(s)?:\/\/.*/.test(url)) {
-            url.value = 'http://' + url.value;
+    var url = document.getElementById('url'),
+        iphone = document.getElementById('iphone-iframe');
+   
+    url.onkeyup = function (e) {
+        if (e.keyCode == 13) {
+            loadUrl(url, iphone);
         }
-        iphone.src = url.value;
-    }   
-    urlForm.onsubmit = loadUrl;
+    };
 }
 window.onload = init;
