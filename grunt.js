@@ -7,7 +7,7 @@ module.exports = function(grunt) {
             files: ['test/index.html']
         },
         lint: {
-            src: 'resource/*.js',
+            src: 'resources/*.js',
             grunt: 'grunt.js',
             tests: 'test/*.js'
         },
